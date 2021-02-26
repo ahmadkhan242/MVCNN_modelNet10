@@ -109,8 +109,8 @@ class ModelNetTrainer(object):
         # out_data = None
         # target = None
 
-        wrong_class = np.zeros(40)
-        samples_class = np.zeros(40)
+        wrong_class = np.zeros(10)
+        samples_class = np.zeros(10)
         all_loss = 0
 
         self.model.eval()

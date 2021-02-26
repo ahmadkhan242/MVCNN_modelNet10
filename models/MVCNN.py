@@ -21,7 +21,7 @@ def flip(x, dim):
 
 class SVCNN(Model):
 
-    def __init__(self, name, nclasses=40, pretraining=True, cnn_name='vgg11'):
+    def __init__(self, name, nclasses=10, pretraining=True, cnn_name='vgg11'):
         super(SVCNN, self).__init__(name)
 
         self.classnames=['bathtub','bed','chair',
