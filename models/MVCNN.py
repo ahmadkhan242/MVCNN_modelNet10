@@ -44,7 +44,7 @@ class SVCNN(Model):
                 self.net.fc = nn.Linear(512,10)
             elif self.cnn_name == 'resnet50':
                 self.net = models.resnet50(pretrained=self.pretraining)
-                self.net.fc = nn.Linear(2048,10)
+                self.net.fc = nn.Sequential(nn.Linear(2048, 1024),nn.Linear(1024,10))
         else:
             if self.cnn_name == 'alexnet':
                 self.net_1 = models.alexnet(pretrained=self.pretraining).features
